@@ -1,0 +1,46 @@
+body{
+    min-width: 10em;
+    text-transform: capitalize;
+
+}
+
+.header-nav{
+    position: absolute; top:-13px; left:30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 1px 1px 2px rgba(45, 45, 44, 0.326);
+    color:rgba(34, 31, 31, 0.661);
+}
+
+#btn-settings{
+    width:100%;
+}
+
+input[type=checkbox] {
+    visibility: hidden;
+  }
+  .checkbox-example {
+    width: 45px;
+    height: 15px;
+    background: rgb(125, 103, 103);
+    margin: 20px 10px;
+    position: relative;
+    border-radius: 5px;
+    opacity: 70%;
+
+  }
+  .checkbox-example label {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transition: all .5s ease;
+    cursor: pointer;
+    position: absolute;
+    top: -2px;
+    left: -3px;
+    background: rgb(21, 15, 15);
+    opacity: 90%;
+  }
+  .checkbox-example input[type=checkbox]:checked + label {
+    left: 27px;
+  }

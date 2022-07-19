@@ -1,0 +1,41 @@
+{
+    "name": "Deleting profanity",
+    "short_name": "delprofanity",
+    "version": "0.1.1",
+    "manifest_version": 3,
+    "minimum_chrome_version": "89",
+    "description": "",
+    "homepage_url": "https://github.com/HenriqueCsar/Extension-Google-for-deleting-profanity",
+    "icons": {
+      "128": "views/icon/icon.png"
+    },
+    "permissions": ["storage"],
+    "options_ui": {
+      "page": "views/options/options.html",
+      "open_in_tab": true
+    },
+    "action": {
+      "default_icon": {
+        "128": "views/icon/icon.png"
+      },
+      "default_popup": "views/popup/popup.html"
+    },
+    "content_scripts": [
+      {
+        "all_frames": true,
+        "matches": ["http://*/*", "https://*/*", "file:///*"],
+        "match_about_blank": true,
+        "exclude_matches": [
+          "https://plus.google.com/hangouts/*",
+          "https://hangouts.google.com/*",
+          "https://meet.google.com/*"
+        ],
+        "css": ["inject.css"],
+        "js": ["inject.js"]
+      }
+    ],
+    "web_accessible_resources": [{
+      "resources": ["inject.css", "shadow.css"],
+      "matches": ["http://*/*", "https://*/*", "file:///*"]
+    }]
+  }
